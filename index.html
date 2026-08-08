@@ -3,171 +3,344 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PT. Lintas Data Prima - LDP</title>
+<title>PT. Lintas Data Prima | Internet Cepat & Stabil</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-  font-family:Arial,sans-serif;
-  background:#f5f7fb;
-  color:#222;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fb;
+    color:#1f2937;
 }
-nav{
-  background:#0878d1;
-  padding:18px 25px;
-  text-align:center;
-  color:white;
+a{text-decoration:none}
+
+/* NAVBAR */
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    height:70px;
+    padding:0 6%;
+    background:linear-gradient(135deg,#087bea,#1597ff);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
-nav h2{margin-bottom:10px}
-nav a{
-  color:white;
-  text-decoration:none;
-  margin:0 12px;
-  font-weight:bold;
+.brand{
+    color:#fff;
+    font-size:21px;
+    font-weight:700;
 }
+.nav-menu{
+    display:flex;
+    gap:28px;
+}
+.nav-menu a{
+    color:#fff;
+    font-weight:600;
+    font-size:15px;
+}
+.nav-menu a:hover{opacity:.8}
+
+/* BANNER */
 .hero{
-  background:linear-gradient(135deg,#17155c,#31207d);
-  color:white;
-  text-align:center;
-  padding:80px 20px;
+    width:100%;
+    background:#17104f;
+    line-height:0;
 }
-.hero h1{font-size:42px;margin-bottom:15px}
-.hero p{font-size:18px;margin-bottom:25px}
-.btn{
-  display:inline-block;
-  padding:14px 28px;
-  border-radius:30px;
-  background:#18a8ff;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
+.hero img{
+    display:block;
+    width:100%;
+    height:auto;
+    max-height:520px;
+    object-fit:cover;
 }
+
+/* INTRO */
+.intro{
+    background:linear-gradient(135deg,#071c3b,#0b65b8);
+    color:#fff;
+    text-align:center;
+    padding:48px 20px;
+}
+.intro h1{
+    font-size:38px;
+    margin-bottom:10px;
+}
+.intro p{
+    font-size:18px;
+    opacity:.92;
+}
+
+/* PROMO */
 .promo{
-  text-align:center;
-  background:white;
-  padding:35px 20px;
+    background:#fff;
+    padding:30px 6%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+    text-align:center;
+    box-shadow:0 2px 12px rgba(0,0,0,.06);
 }
-.promo h2{color:#1680d8;margin-bottom:10px}
-.promo p{margin-bottom:20px}
-.packages{
-  max-width:1100px;
-  margin:50px auto;
-  padding:0 20px;
+.promo h2{
+    color:#087bea;
+    font-size:25px;
 }
-.packages h2{
-  text-align:center;
-  margin-bottom:30px;
-  color:#176fc0;
+.promo p{
+    color:#666;
+    margin-top:5px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    background:#087bea;
+    color:#fff;
+    padding:13px 27px;
+    border-radius:30px;
+    font-weight:700;
+    transition:.2s;
+}
+.btn:hover{
+    background:#0669c9;
+    transform:translateY(-2px);
+}
+
+/* PAKET */
+.section{
+    padding:70px 6%;
+}
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+.section-title h2{
+    font-size:34px;
+    margin-bottom:8px;
+}
+.section-title p{
+    color:#777;
 }
 .cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 .card{
-  background:white;
-  border-radius:18px;
-  padding:30px;
-  text-align:center;
-  box-shadow:0 8px 25px rgba(0,0,0,.08);
+    position:relative;
+    background:#fff;
+    border:1px solid #e6ebf2;
+    border-radius:18px;
+    padding:35px 27px;
+    text-align:center;
+    box-shadow:0 8px 30px rgba(20,50,80,.08);
+    transition:.25s;
 }
-.card h3{font-size:30px;color:#1976d2}
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 14px 35px rgba(20,50,80,.13);
+}
+.card.popular{
+    border:2px solid #087bea;
+    transform:scale(1.03);
+}
+.card.popular:hover{
+    transform:scale(1.03) translateY(-6px);
+}
+.badge{
+    position:absolute;
+    top:-14px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#087bea;
+    color:#fff;
+    padding:6px 20px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+    white-space:nowrap;
+}
+.speed{
+    font-size:31px;
+    font-weight:800;
+    color:#087bea;
+    margin-bottom:8px;
+}
+.description{
+    color:#777;
+    min-height:45px;
+}
 .price{
-  font-size:27px;
-  font-weight:bold;
-  color:#222;
-  margin:15px 0;
+    font-size:29px;
+    font-weight:800;
+    color:#1689e8;
+    margin-top:18px;
 }
-.card ul{
-  list-style:none;
-  line-height:2;
-  margin-bottom:20px;
+.month{
+    color:#888;
+    font-size:14px;
 }
+.features{
+    list-style:none;
+    text-align:left;
+    margin:22px 0;
+}
+.features li{
+    padding:8px 0;
+    color:#555;
+}
+.features li::before{
+    content:"✓";
+    color:#16a765;
+    font-weight:bold;
+    margin-right:9px;
+}
+
+/* KEUNGGULAN */
+.why{
+    background:#fff;
+    padding:70px 6%;
+    text-align:center;
+}
+.why h2{
+    font-size:32px;
+    margin-bottom:40px;
+}
+.why-grid{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+.why-card{
+    padding:30px 20px;
+}
+.icon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+.why-card h3{
+    margin-bottom:8px;
+}
+.why-card p{
+    color:#777;
+}
+
+/* KONTAK */
+.contact{
+    background:linear-gradient(135deg,#087bea,#0757ae);
+    color:#fff;
+    text-align:center;
+    padding:70px 20px;
+}
+.contact h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+.contact p{
+    margin-bottom:25px;
+}
+.contact .btn{
+    background:#fff;
+    color:#087bea;
+}
+
+/* FOOTER */
 footer{
-  background:#11154f;
-  color:white;
-  text-align:center;
-  padding:30px 20px;
+    background:#071a35;
+    color:#cbd5e1;
+    text-align:center;
+    padding:30px 20px;
 }
-@media(max-width:600px){
-  .hero h1{font-size:32px}
-  nav a{margin:0 6px;font-size:14px}
+footer strong{color:#fff}
+
+/* MOBILE */
+@media(max-width:800px){
+    .navbar{
+        height:auto;
+        min-height:70px;
+        padding:14px 20px;
+        flex-direction:column;
+        gap:10px;
+    }
+    .nav-menu{gap:18px}
+    .nav-menu a{font-size:13px}
+    .intro h1{font-size:30px}
+    .intro p{font-size:16px}
+    .promo{
+        flex-direction:column;
+        gap:16px;
+    }
+    .cards{
+        grid-template-columns:1fr;
+        max-width:430px;
+    }
+    .card.popular{
+        transform:none;
+    }
+    .card.popular:hover{
+        transform:translateY(-6px);
+    }
+    .why-grid{
+        grid-template-columns:1fr;
+        max-width:430px;
+    }
+    .section{padding:55px 20px}
+    .hero img{
+        max-height:none;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <h2>PT. Lintas Data Prima</h2>
-  <a href="#home">Beranda</a>
-  <a href="#paket">Paket</a>
-  <a href="#kontak">Kontak</a>
-</nav>
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="brand">PT. Lintas Data Prima</div>
 
-<section class="hero" id="home">
-  <h1>Internet Cepat & Stabil</h1>
-  <p>Solusi internet berkualitas untuk rumah dan kebutuhan bisnis.</p>
-  <a class="btn" href="#paket">Lihat Paket</a>
+    <nav class="nav-menu">
+        <a href="#beranda">Beranda</a>
+        <a href="#paket">Paket</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+</header>
+
+
+<!-- BANNER -->
+<section class="hero" id="beranda">
+    <img src="banner-ldp.png" alt="PT. Lintas Data Prima">
 </section>
 
+
+<!-- TAGLINE -->
+<section class="intro">
+    <h1>Internet Cepat & Stabil</h1>
+    <p>Solusi internet berkualitas untuk rumah, keluarga, dan bisnis.</p>
+</section>
+
+
+<!-- PROMO -->
 <section class="promo">
-  <h2>🔥 GRATIS PEMASANGAN</h2>
-  <p>Khusus pelanggan baru. Daftar sekarang dan nikmati internet cepat & stabil.</p>
-
-  <a class="btn" href="https://wa.me/62XXXXXXXXXXX" target="_blank">
-    Daftar Sekarang
-  </a>
-</section>
-
-<section class="packages" id="paket">
-  <h2>Paket Internet</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>30 Mbps</h3>
-      <p>Internet cepat untuk keluarga</p>
-      <div class="price">Rp120.000</div>
-      <ul>
-        <li>✓ Unlimited</li>
-        <li>✓ Kecepatan hingga 30 Mbps</li>
-        <li>✓ Support teknisi</li>
-      </ul>
-      <a class="btn" href="https://wa.me/62XXXXXXXXXXX" target="_blank">
-        Pilih Paket
-      </a>
+    <div>
+        <h2>🔥 GRATIS PEMASANGAN</h2>
+        <p>Khusus pelanggan baru. Daftar sekarang dan nikmati layanan LDP.</p>
     </div>
 
-    <div class="card">
-      <h3>50 Mbps</h3>
-      <p>Cocok untuk banyak perangkat</p>
-      <div class="price">Rp150.000</div>
-      <ul>
-        <li>✓ Unlimited</li>
-        <li>✓ Kecepatan hingga 50 Mbps</li>
-        <li>✓ Support teknisi</li>
-      </ul>
-      <a class="btn" href="https://wa.me/62XXXXXXXXXXX" target="_blank">
-        Pilih Paket
-      </a>
-    </div>
-
-  </div>
+    <a class="btn"
+       href="https://wa.me/6283850587037?text=Halo%20PT.%20Lintas%20Data%20Prima,%20saya%20ingin%20berlangganan%20internet."
+       target="_blank">
+        Daftar Sekarang
+    </a>
 </section>
 
-<footer id="kontak">
-  <h3>PT. Lintas Data Prima</h3>
-  <p>Internet Cepat & Stabil</p>
-  <br>
 
-  <a class="btn" href="https://wa.me/62XXXXXXXXXXX" target="_blank">
-    💬 Hubungi WhatsApp
-  </a>
-
-  <br><br>
-  <small>© 2026 PT. Lintas Data Prima - LDP</small>
-</footer>
-
-</body>
-</html>
+<!-- PAKET -->
+<section class="section" id="paket">
