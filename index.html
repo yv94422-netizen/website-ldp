@@ -1,337 +1,172 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT. Lintas Data Prima</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PT. Lintas Data Prima - LDP</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fb;
-            color: #222;
-        }
-
-        header {
-            background: linear-gradient(135deg, #087ee1, #005bb5);
-            color: white;
-            padding: 22px 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        header h1 {
-            font-size: 24px;
-            margin-bottom: 12px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #17145c, #32277c);
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
-
-        .hero h2 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #1685e8;
-            color: white;
-            padding: 14px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .promo {
-            background: white;
-            text-align: center;
-            padding: 35px 20px;
-        }
-
-        .promo h2 {
-            color: #1685e8;
-            margin-bottom: 10px;
-        }
-
-        .promo p {
-            margin-bottom: 20px;
-            color: #666;
-        }
-
-        .paket {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .paket h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        .paket-sub {
-            color: #777;
-            margin-bottom: 35px;
-        }
-
-        .cards {
-            max-width: 1100px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 18px;
-            padding: 30px 25px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            border: 1px solid #eee;
-        }
-
-        .card.populer {
-            border: 3px solid #1685e8;
-            transform: translateY(-8px);
-        }
-
-        .badge {
-            display: inline-block;
-            background: #1685e8;
-            color: white;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            font-size: 30px;
-            color: #1685e8;
-            margin-bottom: 8px;
-        }
-
-        .harga {
-            font-size: 27px;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-
-        .harga span {
-            font-size: 14px;
-            font-weight: normal;
-            color: #777;
-        }
-
-        .card ul {
-            list-style: none;
-            text-align: left;
-            margin: 20px 0;
-        }
-
-        .card li {
-            padding: 8px 0;
-        }
-
-        .card li::before {
-            content: "✓ ";
-            color: #1685e8;
-            font-weight: bold;
-        }
-
-        .kontak {
-            background: #111a3a;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .kontak h2 {
-            margin-bottom: 15px;
-        }
-
-        footer {
-            background: #080d20;
-            color: #aaa;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        @media (max-width: 600px) {
-            .hero h2 {
-                font-size: 30px;
-            }
-
-            header h1 {
-                font-size: 20px;
-            }
-
-            nav a {
-                margin: 0 6px;
-                font-size: 14px;
-            }
-
-            .card.populer {
-                transform: none;
-            }
-        }
-    </style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f7fb;
+  color:#222;
+}
+nav{
+  background:#0878d1;
+  padding:18px 25px;
+  text-align:center;
+  color:white;
+}
+nav h2{margin-bottom:10px}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 12px;
+  font-weight:bold;
+}
+.hero{
+  background:linear-gradient(135deg,#17155c,#31207d);
+  color:white;
+  text-align:center;
+  padding:80px 20px;
+}
+.hero h1{font-size:42px;margin-bottom:15px}
+.hero p{font-size:18px;margin-bottom:25px}
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:30px;
+  background:#18a8ff;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+.promo{
+  text-align:center;
+  background:white;
+  padding:35px 20px;
+}
+.promo h2{color:#1680d8;margin-bottom:10px}
+.promo p{margin-bottom:20px}
+.packages{
+  max-width:1100px;
+  margin:50px auto;
+  padding:0 20px;
+}
+.packages h2{
+  text-align:center;
+  margin-bottom:30px;
+  color:#176fc0;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:white;
+  border-radius:18px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+.card h3{font-size:30px;color:#1976d2}
+.price{
+  font-size:27px;
+  font-weight:bold;
+  color:#222;
+  margin:15px 0;
+}
+.card ul{
+  list-style:none;
+  line-height:2;
+  margin-bottom:20px;
+}
+footer{
+  background:#11154f;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+}
+@media(max-width:600px){
+  .hero h1{font-size:32px}
+  nav a{margin:0 6px;font-size:14px}
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>PT. Lintas Data Prima</h1>
+<nav>
+  <h2>PT. Lintas Data Prima</h2>
+  <a href="#home">Beranda</a>
+  <a href="#paket">Paket</a>
+  <a href="#kontak">Kontak</a>
+</nav>
 
-    <nav>
-        <a href="#beranda">Beranda</a>
-        <a href="#paket">Paket</a>
-        <a href="#kontak">Kontak</a>
-    </nav>
-</header>
-
-<section class="hero" id="beranda">
-    <h2>Internet Cepat & Stabil</h2>
-    <p>Solusi internet berkualitas untuk rumah dan kebutuhan bisnis.</p>
-    <a href="#paket" class="btn">Lihat Paket</a>
+<section class="hero" id="home">
+  <h1>Internet Cepat & Stabil</h1>
+  <p>Solusi internet berkualitas untuk rumah dan kebutuhan bisnis.</p>
+  <a class="btn" href="#paket">Lihat Paket</a>
 </section>
 
 <section class="promo">
-    <h2>🔥 GRATIS PEMASANGAN</h2>
-    <p>Khusus pelanggan baru</p>
-    <p>Daftar sekarang dan nikmati internet cepat & stabil.</p>
+  <h2>🔥 GRATIS PEMASANGAN</h2>
+  <p>Khusus pelanggan baru. Daftar sekarang dan nikmati internet cepat & stabil.</p>
 
-    <a
-        class="btn"
-        href="https://wa.me/628XXXXXXXXXX?text=Halo%20LDP%2C%20saya%20ingin%20berlangganan%20internet."
-        target="_blank">
-        Daftar Sekarang
-    </a>
+  <a class="btn" href="https://wa.me/62XXXXXXXXXXX" target="_blank">
+    Daftar Sekarang
+  </a>
 </section>
 
-<section class="paket" id="paket">
+<section class="packages" id="paket">
+  <h2>Paket Internet</h2>
 
-    <h2>Paket Internet</h2>
-    <p class="paket-sub">Pilih paket internet sesuai kebutuhan kamu</p>
+  <div class="cards">
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>30 Mbps</h3>
-            <p>Internet cepat untuk keluarga</p>
-
-            <div class="harga">
-                Rp120.000 <span>/bulan</span>
-            </div>
-
-            <ul>
-                <li>Kecepatan hingga 30 Mbps</li>
-                <li>Unlimited</li>
-                <li>Support teknisi</li>
-            </ul>
-
-            <a class="btn"
-               href="https://wa.me/628XXXXXXXXXX?text=Halo%20LDP%2C%20saya%20ingin%20paket%2030%20Mbps."
-               target="_blank">
-                Pilih Paket
-            </a>
-        </div>
-
-
-        <div class="card populer">
-
-            <div class="badge">PALING POPULER</div>
-
-            <h3>50 Mbps</h3>
-            <p>Pro</p>
-
-            <div class="harga">
-                Rp150.000 <span>/bulan</span>
-            </div>
-
-            <ul>
-                <li>Unlimited</li>
-                <li>Kecepatan hingga 50 Mbps</li>
-                <li>Support teknisi</li>
-            </ul>
-
-            <a class="btn"
-               href="https://wa.me/628XXXXXXXXXX?text=Halo%20LDP%2C%20saya%20ingin%20paket%2050%20Mbps."
-               target="_blank">
-                Pilih Paket
-            </a>
-        </div>
-
-
-        <div class="card">
-
-            <h3>100 Mbps</h3>
-            <p>Kecepatan tinggi untuk kebutuhan besar</p>
-
-            <div class="harga">
-                Rp215.000 <span>/bulan</span>
-            </div>
-
-            <ul>
-                <li>Kecepatan hingga 100 Mbps</li>
-                <li>Unlimited</li>
-                <li>Support teknisi</li>
-            </ul>
-
-            <a class="btn"
-               href="https://wa.me/628XXXXXXXXXX?text=Halo%20LDP%2C%20saya%20ingin%20paket%20100%20Mbps."
-               target="_blank">
-                Pilih Paket
-            </a>
-        </div>
-
+    <div class="card">
+      <h3>30 Mbps</h3>
+      <p>Internet cepat untuk keluarga</p>
+      <div class="price">Rp120.000</div>
+      <ul>
+        <li>✓ Unlimited</li>
+        <li>✓ Kecepatan hingga 30 Mbps</li>
+        <li>✓ Support teknisi</li>
+      </ul>
+      <a class="btn" href="https://wa.me/62XXXXXXXXXXX" target="_blank">
+        Pilih Paket
+      </a>
     </div>
+
+    <div class="card">
+      <h3>50 Mbps</h3>
+      <p>Cocok untuk banyak perangkat</p>
+      <div class="price">Rp150.000</div>
+      <ul>
+        <li>✓ Unlimited</li>
+        <li>✓ Kecepatan hingga 50 Mbps</li>
+        <li>✓ Support teknisi</li>
+      </ul>
+      <a class="btn" href="https://wa.me/62XXXXXXXXXXX" target="_blank">
+        Pilih Paket
+      </a>
+    </div>
+
+  </div>
 </section>
 
-<section class="kontak" id="kontak">
+<footer id="kontak">
+  <h3>PT. Lintas Data Prima</h3>
+  <p>Internet Cepat & Stabil</p>
+  <br>
 
-    <h2>Butuh Internet Cepat & Stabil?</h2>
+  <a class="btn" href="https://wa.me/62XXXXXXXXXXX" target="_blank">
+    💬 Hubungi WhatsApp
+  </a>
 
-    <p>Hubungi PT. Lintas Data Prima sekarang.</p>
-
-    <br>
-
-    <a
-        class="btn"
-        href="https://wa.me/628XXXXXXXXXX?text=Halo%20LDP%2C%20saya%20ingin%20bertanya%20tentang%20paket%20internet."
-        target="_blank">
-        💬 Hubungi WhatsApp
-    </a>
-
-</section>
-
-<footer>
-    © 2026 PT. Lintas Data Prima — LDP
+  <br><br>
+  <small>© 2026 PT. Lintas Data Prima - LDP</small>
 </footer>
 
 </body>
